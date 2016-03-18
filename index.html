@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Parallaxie by TheUltrasoft</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Parallaxie</h1>
+      <h2 class="project-tagline">Easiest, Responsive and Customizable Parallax jQuery Plugin</h2>
+      <a href="https://github.com/TheUltrasoft/Parallaxie" class="btn">View on GitHub</a>
+      <a href="https://github.com/TheUltrasoft/Parallaxie/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/TheUltrasoft/Parallaxie/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="parallaxie" class="anchor" href="#parallaxie" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Parallaxie</h1>
+
+<p>Parallaxie is a jQuery plugin to create parallax effects on your websites or templates. It is very lightweight to download and rendering by your browser.</p>
+
+<h3>
+<a id="current-version" class="anchor" href="#current-version" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Current Version:</h3>
+
+<p>0.5</p>
+
+<h3>
+<a id="dependency" class="anchor" href="#dependency" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dependency:</h3>
+
+<p>This plugin has only one dependency, which is <code>jQuery</code></p>
+
+<h3>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation:</h3>
+
+<p>Installing this plugin is very easy.
+You have to include jQuery and Parallaxie scripts to your website.</p>
+
+<pre><code>&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/parallaxie.min.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<p>Fire up the plugin with any css selector. You must have a background image set into that element or you can use the <code>data-image</code> attribute, will explain about this later. Also, make sure the parallax element must have some height or some content which has some height.</p>
+
+<pre><code>&lt;style&gt;
+.parallaxie{
+    min-height: 360px;
+}
+&lt;/style&gt;
+&lt;div class="parallaxie" style='background: url("path/to/your/image.png")'&gt;&lt;/div&gt;
+&lt;script&gt;
+$('.parallaxie').parallaxie();
+&lt;/script&gt;
+</code></pre>
+
+<p>View a more intutive <a href="http://theultrasoft.com/project/parallaxie">Parallaxie example</a>.</p>
+
+<h3>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Options:</h3>
+
+<p>You can easily customized this plugin any time.</p>
+
+<h4>
+<a id="1-on-initialization" class="anchor" href="#1-on-initialization" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. On initialization:</h4>
+
+<p>This method gives you a quick configuration option.</p>
+
+<pre><code>&lt;script&gt;
+$('.parallaxie').parallaxie({
+    speed: 0.5,
+    offset: 50,
+    ...
+    ...
+});
+&lt;/script&gt;
+</code></pre>
+
+<h4>
+<a id="2-on-declaration" class="anchor" href="#2-on-declaration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. On declaration:</h4>
+
+<p>On declaration of the parallaxie element you can specify the option using the <code>data-parallaxie</code> attribute. This gives you to control or customize different parallaxie elements with different configurations.</p>
+
+<pre><code>&lt;div class="parallaxie" style='background: url("path/to/your/image.png")' data-parallaxie='{
+    "speed": -0.4
+    "size": "auto"
+}'&gt;&lt;/div&gt;
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>speed</td>
+<td>Speed of the parallax. You can use any floating point number. But practically, give any fractional number between -1 and 1. Example: 0.3 or -0.5</td>
+<td>0.2</td>
+</tr>
+<tr>
+<td>repeat</td>
+<td>Should the background repeat or not. Possible values: 'repeat', 'repeat-x', 'repeat-y', 'no-repeat'</td>
+<td>'no-repeat'</td>
+</tr>
+<tr>
+<td>size</td>
+<td>background size of the image. Possible values: 'auto', 'contain', 'cover'</td>
+<td>'cover'</td>
+</tr>
+<tr>
+<td>pos_x</td>
+<td>Position of the image horizontally. Possible values: 'left', 'center', 'right' or any percentage like: '30%'</td>
+<td>'center'</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>The parallax offset. Possible values: Any integer.</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/TheUltrasoft/Parallaxie">Parallaxie</a> is maintained by <a href="https://github.com/TheUltrasoft">TheUltrasoft</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
