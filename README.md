@@ -7,6 +7,10 @@ Parallaxie is a jQuery plugin to create parallax effects on your websites or tem
 ### Dependency:
 This plugin has only one dependency, which is `jQuery`
 
+### Demo:
+
+Watch Parallaxie in action: [http://static.theultrasoft.com/parallaxie/demo/]
+
 ### License:
 Licensed under the MIT License (LICENSE.txt)
 
