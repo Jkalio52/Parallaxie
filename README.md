@@ -9,6 +9,7 @@ This plugin has only one dependency, which is `jQuery`
 
 ### License:
 Licensed under the MIT License (LICENSE.txt)
+
 Copyright (c) 2016 THE ULTRASOFT (http://theultrasoft.com)
 
 ### Installation:
