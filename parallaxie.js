@@ -1,3 +1,12 @@
+/*! Copyright (c) 2016 THE ULTRASOFT (http://theultrasoft.com)
+ * Licensed under the MIT License (LICENSE.txt).
+ *
+ * Project: Parallaxie
+ * Version: 0.5
+ *
+ * Requires: jQuery 1.9+
+ */
+
 (function( $ ){
 
     $.fn.parallaxie = function( options ){
