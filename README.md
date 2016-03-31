@@ -9,7 +9,7 @@ This plugin has only one dependency, which is `jQuery`
 
 ### Demo:
 
-Watch Parallaxie in action: [http://static.theultrasoft.com/parallaxie/demo/]
+Watch Parallaxie in action: http://static.theultrasoft.com/parallaxie/demo/
 
 ### License:
 Licensed under the MIT License (LICENSE.txt)
