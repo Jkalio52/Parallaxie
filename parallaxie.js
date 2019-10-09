@@ -11,7 +11,7 @@
 
     $.fn.parallaxie = function( options ){
 
-        var options = $.extend({
+        options = $.extend({
             speed: 0.2,
             repeat: 'no-repeat',
             size: 'cover',
@@ -23,11 +23,11 @@
 
             var $el = $(this);
             var local_options = $el.data('parallaxie');
-            if( typeof local_options != 'object' ) local_options = {};
+            if( typeof local_options !== 'object' ) local_options = {};
             local_options = $.extend( {}, options, local_options );
 
             var image_url = $el.data('image');
-            if( typeof image_url == 'undefined' ){
+            if( typeof image_url === 'undefined' ){
                 image_url = $el.css('background-image');
                 if( !image_url ) return;
 
@@ -41,15 +41,26 @@
                     'background-position': local_options.pos_x + ' ' + pos_y + 'px',
                 });
 
+
+                // Call by default for the first time on initialization.
+                parallax_scroll( $el, local_options );
+
+                // Call by whenever the scroll event occurs.
                 $(window).scroll( function(){
-                        //var pos_y = - ( $(window).scrollTop() - $el.offset().top ) * ( 1 + local_options.speed ) - ( $el.offset().top * local_options.speed );
-                        var pos_y =  local_options.offset + ($el.offset().top - $(window).scrollTop()) * (1 - local_options.speed );
-                        $el.data( 'pos_y', pos_y );
-                        $el.css( 'background-position', local_options.pos_x + ' ' + pos_y + 'px' );
-                    }
-                );
+                    parallax_scroll( $el, local_options );
+                });
+
             }
         });
+
         return this;
     };
+
+
+    function parallax_scroll( $el, local_options ){
+        var pos_y =  local_options.offset + ($el.offset().top - $(window).scrollTop()) * (1 - local_options.speed );
+        $el.data( 'pos_y', pos_y );
+        $el.css( 'background-position', local_options.pos_x + ' ' + pos_y + 'px' );
+    }
+
 }( jQuery ));
